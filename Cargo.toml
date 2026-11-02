@@ -1,0 +1,42 @@
+[package]
+name = "rs-sqlite2rbat"
+version = "0.1.0"
+edition = "2024"
+
+exclude = [
+]
+
+[lints.rust]
+unsafe_code = "forbid"
+
+[lints.clippy]
+unwrap_used = "forbid"
+expect_used = "forbid"
+panic = "forbid"
+
+[profile.release-wasi]
+inherits = "release"
+lto = true
+strip = true
+opt-level = 's'
+codegen-units = 1
+
+[dependencies.arrow-array]
+version = "60.1.0"
+default-features = false
+features = [
+]
+
+[dependencies.arrow-schema]
+version = "60.1.0"
+default-features = false
+features = [
+]
+
+[dependencies.rusqlite]
+version = "0.41.0"
+default-features = false
+features = [
+    "bundled",
+    "wasm32-wasi-vfs",
+]
