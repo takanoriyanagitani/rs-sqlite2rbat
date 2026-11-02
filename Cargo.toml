@@ -3,6 +3,13 @@ name = "rs-sqlite2rbat"
 version = "0.1.0"
 edition = "2024"
 
+description = "Converts SQLite rows to a record batch"
+license = "Apache-2.0"
+repository = "https://github.com/takanoriyanagitani/rs-sqlite2rbat"
+homepage = "https://github.com/takanoriyanagitani/rs-sqlite2rbat"
+documentation = "https://docs.rs/rs-sqlite2rbat/latest"
+keywords = ["sqlite", "arrow", "recordbatch"]
+
 exclude = [
 ]
 
